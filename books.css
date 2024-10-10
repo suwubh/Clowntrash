@@ -1,0 +1,644 @@
+/* Hero section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Make sure the hero section takes the full viewport height */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    text-align: left;
+}
+
+/* Background image styling */
+.hero-section img {   
+    width: 100%; /* Set the image width to 100% of the viewport width */
+    height: 100%; /* Set the image height to 100% of the viewport height */
+    object-fit: cover; /* Make sure the image scales properly and covers the area */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place the image behind the text */
+    border-radius: 5px; /* Adjust this value to control the roundness */
+}
+
+/* Style for the "clowntrash" text */
+.overlay-text {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    font-size: 4rem;
+    font-family: 'Paytone One', sans-serif;
+    font-weight: bold;
+    color: #4e342e;
+    text-decoration: none;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.overlay-text:hover {
+    color: #000000;
+}
+
+/* Hero content positioning */
+.hero-content {
+    position: absolute;
+    top: 13%;  /* Adjust the vertical position to match clowntrash */
+    left: 60%; /* Position it next to clowntrash */
+    z-index: 2; /* Make sure the text is above the background image */
+}
+
+/* Title styling */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 200;  /* ExtraLight font weight */
+    letter-spacing: 0.05em;
+    font-family: 'Roboto', sans-serif;
+    color: #333; /* Ensure text visibility */
+    z-index: 2;
+    text-align: center;
+}
+
+/* Typewriter effect */
+#typewriter-text::after {
+    font-weight: normal;
+    margin-left: 5px;
+    animation: blink 0.7s step-end infinite;
+}
+
+/* Slow appearance of second text */
+.hidden {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+.show {
+    opacity: 1;
+}
+
+
+
+/* Recommendations container */
+.recommendations-container {
+    position: relative;
+    top: 135%; /* Position below the hero section */
+    left: 5%; /* Align to the left */
+    width: 60%; /* Adjust width as needed */
+    display: flex; /* Use Flexbox for horizontal alignment */
+    justify-content: space-between; /* Space between the two items */
+    background-color: #f9f9f9; /* Optional background color */
+    padding: 10px; /* Reduced padding for tighter spacing */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Recommendation text styling */
+.recommendation-text, .friend-reading {
+    width: 45%; /* Set width without flex properties */
+    padding: 10px; /* Add padding for better spacing within */
+    margin: 0; /* Remove margin for consistency */
+}
+
+/* Add a specific margin to create space between them */
+.recommendation-text {
+    margin-right: 10px; /* Adjust this value to increase space */
+}
+
+.friend-reading {
+    margin-left: 300px; /* Adjust this value to increase space */
+}
+
+/* Discover section */
+.discover-section {
+    background: linear-gradient(to bottom, #fff0d3 80%, #b9b2a4 20%); /* Gradient background */
+    padding: 40px 20px; /* Padding for the whole section */
+    text-align: center; /* Center the text */
+    max-width: 1000px; /* Limit the width of the section */
+    margin-left: 50px; /* Move the section to the left */
+    border-radius: 10px; /* Optional: Rounded corners for aesthetics */
+}
+
+/* Section header */
+.discover-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    margin-top: -20px;
+    margin-left: -500px;
+    color: #333;
+}
+
+/* Book series container and liked book - all in a row */
+.book-series-1, .book-series-2 {
+    display: flex; /* Align all items in a row */
+    align-items: center; /* Vertically center the liked book */
+    justify-content: flex-start; /* Align everything to the left */
+    margin-bottom: 50px; /* Space between this row and the next section */
+    margin-top: -10px; /* Consider removing negative margin for better alignment */
+    padding-left: 50px; /* Move entire book row to the right */
+}
+
+/* Individual book images in a row */
+.book-row {
+    display: flex; /* Keep the book images in a row */
+    gap: 20px; /* Space between book images */
+}
+
+/* Book images styling */
+.book-image {
+    width: 100px; /* Fixed width for consistency */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    cursor: pointer;
+}
+
+/* Arrow and liked book next to book-row */
+.arrow-and-liked {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center vertically with book images */
+    margin-left: 20px; /* Space between the book series and the liked book */
+}
+
+/* Text indicating the discovered book */
+.discovered-text {
+    font-size: 1rem; /* Size of the discovered text */
+    color: #4e342e; /* Text color */
+    position: relative; /* or absolute based on your layout */
+    top: -10px; /* Adjust as needed */
+    margin-left: 673px; /* Move it to the right by 20px */}
+
+/* SVG arrow styling */
+.arrow-image {
+    width: 50px; /* Size of the arrow */
+    height: 50px; /* Keep the arrow square */
+    margin-right: 20px; /* Space between the arrow and liked book */
+    fill: #b9b2a4; /* Arrow color */
+}
+
+/* Liked book styling */
+.liked-book {
+    position: relative; /* Positioning for the liked book image */
+}
+
+.liked-book img {
+    width: 120px; /* Adjusted size for liked book */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.passage-text {
+    position: absolute; /* Use absolute positioning */
+    top: 40px; /* Adjust this value to align vertically */
+    left: calc(100% + 10px); /* Adjust for horizontal spacing, move it right next to the liked book */
+    font-size: 0.9rem; /* Adjust font size if needed */
+    color: #4e342e; /* Text color */
+    margin: 0; /* Remove margins */
+    white-space: nowrap; /* Prevent line breaks if necessary */
+}
+
+/* Each series container (Shagun/Dristi liked) */
+.book-liked-series {
+    margin-bottom: 40px; /* Space between different liked series */
+}
+
+/* Liked text - now above the images */
+.liked-text {
+    font-size: 1.25rem; /* Font size for liked text */
+    color: #4e342e; /* Text color */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 0px; /* Space between text and images */
+    text-align: left; /* Align the text to the left */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .discover-section {
+        max-width: 90%; /* Responsive width */
+    }
+
+    /* Stack everything vertically on small screens */
+    .book-series-1, .book-series-2 {
+        flex-direction: column; /* Stack series vertically */
+        padding-left: 0; /* Remove padding on smaller screens */
+    }
+
+    .book-row {
+        justify-content: center; /* Center book images on small screens */
+    }
+
+    .arrow-and-liked {
+        margin-top: 10px; /* Space above the arrow */
+        justify-content: center; /* Center arrow and liked book on small screens */
+    }
+
+    .arrow-image {
+        margin-right: 0; /* Remove right margin on small screens */
+        margin-bottom: 10px; /* Add space below the arrow */
+    }
+}
+
+/* Search and Browse Books Section */
+.search-browse-section {
+    padding: 30px 20px; /* Padding for spacing */
+    max-width: 1000px;
+    margin-left: 50px; /* Align with the discover section */
+    text-align: left;
+}
+
+.search-browse-section h3 {
+    font-size: 2rem; /* Slightly larger header */
+    color: #4e342e; /* Matching brown color */
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.search-input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.browse-links-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    grid-gap: 10px 15px; /* Gap between items */
+    margin-top: 20px;
+    padding-left: 15px; /* Aligns with input */
+}
+
+.browse-links-grid a {
+    font-size: 1rem;
+    color: #0077cc; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.browse-links-grid a:hover {
+    color: #4e342e; /* Hover color */
+}
+
+/* Responsive Grid for smaller screens */
+@media (max-width: 768px) {
+    .browse-links-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .browse-links-grid {
+        grid-template-columns: repeat(1, 1fr); /* Stack items in one column */
+    }
+}
+
+
+/* Sign-in container */
+.sign-in-container {
+    position: absolute;
+    top: 105%; /* Move it further down by increasing the top value */
+    right: 5%; /* Move it further to the right by decreasing the right value */
+    width: 250px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+.sign-in-container button {
+    display: block;
+    top: 130%;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.amazon-button {
+    background-color: #ff9900;
+    color: white;
+}
+
+.google-button {
+    background-color: #000000;
+    color: white;
+}
+
+.email-button {
+    background-color: #4e342e;
+    color: white;
+}
+
+/* Link styling */
+.sign-in-container a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.sign-in-container a:hover {
+    text-decoration: underline;
+}
+
+/* Right Sidebar Layout */
+.right-sidebar {
+    max-width: 300px; /* Adjust this width as needed */
+    margin-left: 1133px; /* Push to the right */
+    margin-top: -2000px; /* Adjust this value to move it up */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.right-sidebar h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* News & Interviews Section */
+.news-interviews-section {
+    margin-bottom: 25px;
+}
+
+.news-interviews-section .news-link {
+    font-size: 1.1rem;
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-interviews-section a:hover {
+    text-decoration: underline;
+}
+
+.news-interviews-section .news-image img {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.news-interviews-section .news-details {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Love Lists Section */
+.love-lists-section {
+    margin-bottom: 30px;
+}
+
+.love-lists-section a:hover {
+    text-decoration: underline;
+}
+
+.love-lists-section .list-item {
+    margin-bottom: 15px;
+}
+
+.love-lists-section a {
+    font-size: 1rem;
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.love-lists-section span {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.love-lists-section .list-image img {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* More Lists Link */
+.more-lists-link {
+    display: block;
+    margin-top: 10px;
+    color: #0077cc;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+/* Author / Publisher Section */
+.author-publisher-section {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.author-publisher-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #4e342e;
+}
+
+.author-publisher-section p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.author-program-btn, .advertise-btn {
+    background-color: #4e342e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 5px;
+}
+
+.author-program-btn:hover, .advertise-btn:hover {
+    background-color: #333;
+}
+
+
+/* Additional styling for responsiveness */
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 2rem;
+        left: 5%;
+    }
+    .recommendations-container {
+        width: 90%; /* Full width on small screens */
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+    .recommendation-text, .friend-reading {
+        width: 100%; /* Full width for each section on smaller screens */
+    }
+}
+
+/* Clowntrash Choice Awards Section */
+.awards-section {
+    background-color: #f9f9f9; /* Light background */
+    padding: 40px 20px; /* Padding for overall section */
+    text-align: center; /* Center align the content */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 1100px; /* Limit the width */
+    margin-right: 10px;
+}
+
+.awards-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.award-logo img {
+    width: 200px; /* Adjust size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 30px; /* Space below the logo */
+}
+
+/* Two-column layout for categories */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-gap: 20px; /* Space between columns */
+    padding: 20px;
+    text-align: left; /* Align text to the left in columns */
+    cursor: pointer;
+}
+
+.categories .column ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.categories .column ul li {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4e342e; /* Matching brown color */
+    margin-bottom: 15px; /* Space between each item */
+    padding: 10px;
+    background-color: #fff0d3; /* Light cream background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for categories */
+.categories .column ul li:hover {
+    background-color: #b9b2a4; /* Change background on hover to match theme */
+    color: white; /* White text on hover */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .categories {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+}
+
+/* Footer Section Styling */
+.footer-section {
+    background-color: #f9f9f9; /* Light background */
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid #e6e6e6;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; /* Added gap between columns */
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 10px;
+    min-width: 180px;
+}
+
+.footer-column h4 {
+    color: #7d7d7d;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #7d7d7d;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Social icons styling */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons li a {
+    color: #7d7d7d;
+    font-size: 24px;
+}
+
+.social-icons li a:hover {
+    color: #4e342e; /* Hover color */
+}
+
+/* App Store and Google Play buttons */
+.app-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.app-buttons img {
+    width: 130px;
+    height: auto;
+}
+
+/* Footer copyright text */
+.footer-column p {
+    margin-top: 20px;
+    color: #7d7d7d;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin: 20px 0;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+

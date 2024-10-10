@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clowntrash Website</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="books.css">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="hero-section">
+    <!-- Background image with updated name "cover.jpg" -->
+    <img src="cover.jpg" alt="Books Background">
+
+    <!-- Clickable text that refreshes the page -->
+    <a href="#" class="overlay-text" id="refresh-link">clowntrash</a>
+
+    <!-- Text with typewriter effect and slow appearing text -->
+    <div class="hero-content">
+        <h1 class="hero-title">
+            <span id="typewriter-text"></span><br>
+            <span id="slow-text" class="hidden">favorite book</span>
+        </h1>
+    </div>
+</div>
+
+
+    <!-- New text container for reading recommendations -->
+    <div class="recommendations-container">
+        <div class="recommendation-text">
+            <h4>Deciding what to read next?</h4>
+            <p>You’re in the right place. Tell us what titles or genres you’ve enjoyed in the past, and we’ll give you surprisingly insightful recommendations.</p>
+        </div>
+        
+        <div class="friend-reading">
+            <h4>What are your friends reading?</h4>
+            <p>Chances are your friends are discussing their favorite (and least favorite) books on Clowntrash.</p>
+        </div>
+    </div>
+
+    <!-- What will you discover section -->
+    <div class="discover-section">
+        <h2>What will you discover?</h2>
+
+        <!-- First book series (Shagun liked...) -->
+        <div class="book-series-1">
+            <div class="book-liked-series">
+                <!-- Text above the book images -->
+                <div class="liked-text">Because Shagun liked...</div>
+                   <div class="discovered-text">She discovered:</div> <!-- New text here -->
+
+                <div class="book-row">
+                    <img src="book1.jpeg" alt="Book 1" class="book-image">
+                    <img src="book2.jpeg" alt="Book 2" class="book-image">
+                    <img src="book3.jpeg" alt="Book 3" class="book-image">
+                    <img src="book4.jpeg" alt="Book 4" class="book-image">
+                    <img src="book9.jpeg" alt="Book 9" class="book-image">
+
+                    <!-- Arrow and liked book included in the book-row -->
+                    <div class="arrow-and-liked">
+                        <svg class="arrow-image" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="#b9b2a4">
+                            <path d="M22 12l-8 8v-6h-8v-4h8v-6z"/>
+                        </svg>
+                        <div class="liked-book">
+                            <img src="liked-book1.jpeg" alt="Shagun liked this book" class="book-image liked">
+            <div class="passage-text">
+                The passage of time,<br>
+                The nature of art,<br>
+                The female experience
+            </div> <!-- New passage -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second book series (Dristiii liked...) -->
+        <div class="book-series-2">
+            <div class="book-liked-series">
+                <!-- Text above the book images -->
+                <div class="liked-text">Because Dristiii liked...</div>
+                <div class="discovered-text">She discovered:</div> <!-- New text here -->
+                <div class="book-row">
+                    <img src="book5.jpeg" alt="Book 5" class="book-image">
+                    <img src="book6.jpeg" alt="Book 6" class="book-image">
+                    <img src="book7.jpeg" alt="Book 7" class="book-image">
+                    <img src="book8.jpeg" alt="Book 8" class="book-image">
+                    <img src="book10.jpeg" alt="Book 10" class="book-image">
+
+                    <!-- Arrow and liked book included in the book-row -->
+                    <div class="arrow-and-liked">
+                        <svg class="arrow-image" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="#b9b2a4">
+                            <path d="M22 12l-8 8v-6h-8v-4h8v-6z"/>
+                        </svg>
+                        <div class="liked-book">
+                            <img src="liked-book2.jpeg" alt="Dristiii liked this book" class="book-image liked">
+            <div class="passage-text">
+                Manners,<br>
+                Upbringing,<br>
+                Morality,<br>
+                Education
+            </div> <!-- New passage -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Clowntrash Choice Awards Section -->
+    <section class="awards-section">
+        <div class="container">
+            </div>
+            <h1>Clowntrash Choice Awards: The Best Books 2023</h1>
+            <div class="categories">
+                <div class="column">
+                    <ul>
+                        <li>Best Books 2023</li>
+                        <li>Best Fiction</li>
+                        <li>Best Historical Fiction</li>
+                        <li>Best Mystery & Thriller</li>
+                        <li>Best Romance</li>
+                        <li>Best Romantasy</li>
+                        <li>Best Fantasy</li>
+                        <li>Best Science Fiction</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li>Best Horror</li>
+                        <li>Best Young Adult Fantasy & Science Fiction</li>
+                        <li>Best Young Adult Fiction</li>
+                        <li>Best Debut Novel</li>
+                        <li>Best Nonfiction</li>
+                        <li>Best Memoir & Autobiography</li>
+                        <li>Best History & Biography</li>
+                        <li>Best Humor</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Browse Books Section -->
+    <div class="search-browse-section">
+        <h3>Search and browse books</h3>
+        <input type="text" class="search-input" placeholder="Title / Author / ISBN">
+
+        <div class="browse-links-grid">
+            <a href="#">Art</a>
+            <a href="#">Biography</a>
+            <a href="#">Business</a>
+            <a href="#">Children's</a>
+            <a href="#">Christian</a>
+            <a href="#">Classics</a>
+            <a href="#">Comics</a>
+            <a href="#">Cookbooks</a>
+            <a href="#">Ebooks</a>
+            <a href="#">Fantasy</a>
+            <a href="#">Fiction</a>
+            <a href="#">Graphic Novels</a>
+            <a href="#">Historical Fiction</a>
+            <a href="#">History</a>
+            <a href="#">Horror</a>
+            <a href="#">Memoir</a>
+            <a href="#">Music</a>
+            <a href="#">Mystery</a>
+            <a href="#">Nonfiction</a>
+            <a href="#">Poetry</a>
+            <a href="#">Psychology</a>
+            <a href="#">Romance</a>
+            <a href="#">Science</a>
+            <a href="#">Science Fiction</a>
+            <a href="#">Self Help</a>
+            <a href="#">Sports</a>
+            <a href="#">Thriller</a>
+            <a href="#">Travel</a>
+            <a href="#">Young Adult</a>
+            <a href="#">More genres</a>
+        </div>
+    </div>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>COMPANY</h4>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Interest Based Ads</a></li>
+                <li><a href="#">Ad Preferences</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>WORK WITH US</h4>
+            <ul>
+                <li><a href="#">Authors</a></li>
+                <li><a href="#">Advertise</a></li>
+                <li><a href="#">Authors & ads blog</a></li>
+                <li><a href="#">API</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>CONNECT</h4>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <ul class="app-buttons">
+                <li><a href="#"><img src="appstore.png" alt="App Store"></a></li>
+                <li><a href="#"><img src="googleplay.png" alt="Google Play"></a></li>
+            </ul>
+            <p>&copy; 2024 Clowntrash, Inc. <br>Mobile version</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Sign-in section (new section for buttons) -->
+    <div class="sign-in-container">
+        <h3>Discover & read more</h3>
+        <button class="amazon-button">Continue with Amazon</button>
+        <button class="google-button">Continue with Google</button>
+        <button class="email-button">Sign up with email</button>
+        <p>By creating an account, you agree to the Clowntrash <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+        <p>Already a member? <a href="#">Sign In</a></p>
+    </div>
+
+    <!-- News & Interviews Section -->
+    <div class="right-sidebar">
+        <div class="news-interviews-section">
+            <h4>News & Interviews</h4>
+            <a href="#" class="news-link">The Biggest Book-to-Screen Adaptations of 2024</a>
+            <div class="news-image">
+                <img src="https://images.gr-assets.com/blogs/1726854616p7/2849.jpg" alt="Book to Screen Adaptations">
+            </div>
+            <div class="news-details">
+                <span>20 likes · 6 comments</span>
+            </div>
+        </div>
+
+        <!-- Love Lists Section -->
+        <div class="love-lists-section">
+            <h4>Love lists?</h4>
+            <div class="list-item">
+                <a href="#">Best Crime & Mystery Books</a>
+                <span>7,176 books | 16,467 voters</span>
+                <div class="list-image">
+                    <img src="https://www.novelsuspects.com/wp-content/uploads/2019/10/True-Crime-Books-That-Are-Scarier-Than-Fiction-Featured-Image.png" alt="Crime Books">
+                </div>
+            </div>
+            <div class="list-item">
+                <a href="#">Best Books of the 20th Century</a>
+                <span>7,774 books | 51,186 voters</span>
+                <div class="list-image">
+                    <img src="https://bookart101.com/wp-content/uploads/2020/04/Marketing-Business-Corporate-Start-up-Facebook-Cover-2.jpg" alt="20th Century Books">
+                </div>
+            </div>
+            <div class="list-item">
+                <a href="#">Best for Book Clubs</a>
+                <span>13,225 books | 17,930 voters</span>
+                <div class="list-image">
+                    <img src="https://prh.imgix.net/articles/bookclubpicksautumn2023-1600x800.jpg" alt="Book Clubs">
+                </div>
+            </div>
+            <a href="#" class="more-lists-link">More book lists</a>
+        </div>
+
+        <!-- Author/Publisher Section -->
+        <div class="author-publisher-section">
+            <h4>Are you an author or a publisher?</h4>
+            <p>Gain access to a massive audience of book lovers. Goodreads is a great place to promote your books.</p>
+            <button class="author-program-btn">Author program</button>
+            <button class="advertise-btn">Advertise</button>
+        </div>
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="books.js"></script>
+</body>
+</html>
